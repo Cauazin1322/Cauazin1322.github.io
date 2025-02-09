@@ -1,54 +1,57 @@
-@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto:400,700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-    width: 100%;
     box-sizing: border-box;
 }
 
 body {
     background-color: #004d00; /* Verde Escuro */
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    line-height: 1.6;
 }
 
 header {
     background-image: linear-gradient(to bottom, #006600, #009900, #00cc00, #00ff00, #004d00); /* Gradiente de Verde */
-    padding: 10px;
+    padding: 20px;
     text-align: center;
 }
 
 h1 {
     background-image: linear-gradient(to bottom, #006600, #009900, #00cc00, #00ff00, #004d00); /* Gradiente de Verde */
     display: flex;
-    height: 45px;
+    height: 60px;
     justify-content: center;
     align-items: center;
-    font-size: 35px;
+    font-size: 40px;
     letter-spacing: 2px;
-    font-family: "Bebas Neue";
+    font-family: 'Bebas Neue', sans-serif;
     font-weight: lighter; 
     color: #ffd700; /* Dourado */
 }
 
 nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     background-color: #ffd700; /* Dourado */
     padding: 10px;
 }
 
-a {
-    padding: 5px;
+nav a {
+    padding: 10px 20px;
+    margin: 0 10px;
     letter-spacing: 2px;
-    font-family: "Bebas Neue";
+    font-family: 'Bebas Neue', sans-serif;
     font-weight: lighter;
     text-decoration: none;
     color: white;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 
-#ui:hover, #ai:hover {
+nav a:hover {
     background-color: #ffcc00; /* Dourado Claro */
     border-bottom: 2px solid white;
 }
@@ -57,6 +60,7 @@ a {
     max-width: 50%; /* Ajuste o tamanho da imagem */
     height: auto;
     margin: 20px 0; /* Adicione margem para espaçamento */
+    border-radius: 10px;
 }
 
 .container {
@@ -76,29 +80,33 @@ section {
     width: 80%;
     margin: 10px;
     padding: 20px;
+    border-radius: 10px;
 }
 
 h2 {
     border: 3px solid white;
-    padding: 4px;
+    padding: 10px;
     color: white;
-    font-family: "Bebas Neue";
+    font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 2px;
     font-weight: lighter;
     background-color: #006600; /* Verde Escuro */
     width: 100%;
     text-align: center;
+    border-radius: 10px;
 }
 
 ol {
     width: 75%;
     list-style-position: inside;
+    padding: 10px;
 }
 
 li {
     color: white;
-    font-family: "Bebas Neue";
+    font-family: 'Roboto', sans-serif;
     font-size: 24px;
+    margin: 5px 0;
 }
 
 .playlist {
@@ -109,6 +117,7 @@ li {
     margin: 20px auto;
     padding: 10px;
     border: 3px solid white;
+    border-radius: 10px;
 }
 
 #spotify, #youtube {
@@ -116,6 +125,7 @@ li {
     margin: 5px;
     border-radius: 10px;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 #spotify {
@@ -145,6 +155,30 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Botão de Voltar ao Topo */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffd700; /* Dourado */
+    color: black;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    display: none;
+    transition: background-color 0.3s ease;
+}
+
+#back-to-top:hover {
+    background-color: #ffcc00; /* Dourado Claro */
+}
+
+/* Mostrar o botão de voltar ao topo quando a página for rolada */
+body.scrolled #back-to-top {
+    display: block;
 }
 
 /* Media Queries para Responsividade */
