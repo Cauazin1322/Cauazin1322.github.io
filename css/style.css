@@ -1,166 +1,75 @@
-@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
-
-* {
+body {
     margin: 0;
     padding: 0;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: darkgreen;
+    background-color: #111;
+    color: white;
+    text-align: center;
     font-family: Arial, sans-serif;
 }
 
-header {
-    background-image: linear-gradient(to bottom, green, yellow, darkgreen, #004600, black);
-    padding: 10px;
-    text-align: center;
+.header {
+    background-color: black;
+    padding: 20px;
+    border-bottom: 5px solid white;
 }
 
-h1 {
-    background-image: linear-gradient(to bottom, green, yellow, darkgreen, #004600, black);
+.header h1 {
+    margin: 0;
+    color: white;
+    font-size: 2.5em; /* Ajuste o tamanho conforme necessário */
+}
+
+.menu {
+    background-color: white;
+    padding: 10px;
     display: flex;
-    height: 45px;
     justify-content: center;
-    align-items: center;
-    font-size: 35px;
-    letter-spacing: 2px;
-    font-family: "Bebas Neue";
-    font-weight: lighter; 
-    color: wheat;
 }
 
-nav {
-    display: flex;
-    justify-content: space-evenly;
-    background-color: burlywood;
-    padding: 10px;
-}
-
-a {
-    padding: 5px;
-    letter-spacing: 2px;
-    font-family: "Bebas Neue";
-    font-weight: lighter;
+.menu a {
     text-decoration: none;
-    color: white;
-    text-align: center;
+    color: black;
+    font-weight: bold;
+    margin: 0 15px;
+    font-size: 18px;
+    padding: 10px 20px; /* Adiciona preenchimento para parecer um botão */
+    background-color: white; /* Cor de fundo do botão */
+    border: 2px solid black; /* Borda do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave para cor de fundo e texto */
 }
 
-#ui:hover, #ai:hover {
-    background-color: darkkhaki;
-    border-bottom: 2px solid white;
+.menu a:hover {
+    color: white; /* Cor do texto ao passar o mouse */
+    background-color: black; /* Cor de fundo ao passar o mouse */
 }
 
-#members {
-    max-width: 100%;
-    height: auto;
+.menu a.spotify-link {
+    background-color: #1DB954; /* Cor de fundo verde do Spotify */
+    border-color: #1DB954; /* Cor da borda verde do Spotify */
+    color: white; /* Cor do texto branco */
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.menu a.spotify-link:hover {
+    background-color: #1ed760; /* Cor de fundo verde mais clara ao passar o mouse */
+    border-color: #1ed760; /* Cor da borda verde mais clara ao passar o mouse */
+}
+
+.content {
+    background-color: #ddd;
     padding: 20px;
-}
-
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 3px double white;
-    justify-content: center;
-    background-color: darkkhaki;
-    width: 80%;
-    margin: 10px;
-    padding: 20px;
-}
-
-h2 {
-    border: 3px solid white;
-    padding: 4px;
-    color: white;
-    font-family: "Bebas Neue";
-    letter-spacing: 2px;
-    font-weight: lighter;
-    background-color: darkolivegreen;
-    width: 100%;
-    text-align: center;
-}
-
-ol {
-    width: 75%;
-    list-style-position: inside;
-}
-
-li {
-    color: white;
-    font-family: "Bebas Neue";
-    font-size: 24px;
-}
-
-.playlist {
-    display: flex;
-    justify-content: center;
-    background-color: darkkhaki;
-    width: 65%;
     margin: 20px auto;
+    width: 80%; /* Centraliza o conteúdo e define a largura */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.section {
+    margin-bottom: 40px; /* Adiciona espaço entre as seções */
+}
+
+.footer {
+    background-color: black;
+    color: white;
     padding: 10px;
-    border: 3px solid white;
-}
-
-#spotify, #youtube {
-    padding: 10px;
-    margin: 5px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-#spotify {
-    background-color: green;
-}
-
-#youtube {
-    background-color: red;
-}
-
-#spotify:hover {
-    background-color: darkgreen;
-    border: 2px solid green;
-}
-
-#youtube:hover {
-    background-color: darkred;
-    border: 2px solid red;
-}
-
-
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-
-    section {
-        width: 100%;
-    }
-
-    .playlist {
-        width: 90%;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 28px;
-    }
-
-    li {
-        font-size: 20px;
-    }
-
-    #spotify, #youtube {
-        padding: 8px;
-        margin: 3px;
-    }
+    font-size: 14px;
 }
